@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-import { Button } from '@/shared/ui/button';
+import { Button } from '@mui/material';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -10,10 +9,10 @@ function App() {
   return (
     <>
       <h1 className='text-3xl font-bold underline'>Hello World!</h1>
-      <div>
-        <Button onClick={onClickButton}>Click me</Button>
-        {show && <div>Button is clicked</div>}
-      </div>
+      <Button variant='contained' onClick={onClickButton}>
+        Click
+      </Button>
+      <div>{show && <div>Button is clicked</div>}</div>
     </>
   );
 }
